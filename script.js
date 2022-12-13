@@ -1,5 +1,5 @@
  alert("Bienvenido a mi fixture del mundial!")
-let opciones = prompt(" ingrese 1 para ver las fases de grupos \n ingrese 2 para ver la actualidad de los partidos") 
+let opciones = prompt(" Ingrese 1 para ver las fases de grupos \n Ingrese 2 para ver la actualidad de los partidos") 
 
 function  Equipos( letra, Grupo, EquipoClasificado, PuntosEquipoClasificado ) {
 
@@ -11,30 +11,54 @@ this.PuntosEquipoClasificado = PuntosEquipoClasificado
 }
 
 
-
-/*const*/ const Grupo = [
-    new Equipos("A" , " 1) paises bajos \n 2) senegal \n 3) ecuador \n 4) qatar \n " , " Paises Bajos \n  senegal \n " , "7 \n 6 \n "  )  ,
-    new Equipos("B" , " 1) Inglaterra \n 2) Estados Unidos \n 3) Iran \n 4) gales \n " , "inglaterra \n EstadosUnidos \n " , "7 \n 5 \n "  ) , 
-    new Equipos("C" , " 1) Argentina \n 2) polonia \n 3) mexico \n 4) arabia saudita \n " , " argentina \n  polonia \n " , "6 \n 4 \n "  )  ,
-    new Equipos("D" , " 1) Francia \n 2) australia \n 3) tunez \n 4) dinamarca \n ", "francia \n australia \n " , " 6 \n 6 \n ") ,
-    new Equipos("E" , " 1) japon \n 2) españa \n 3) alemania \n 4) costa rica \n " , " japon \n españa " ,  "6 \n 4 \n "  ) ,
-    new Equipos("F" , " 1) marruecos \n 2) croacia \n 3) belgica \n 4) canada \n " , " marruecos \n croacia " ,  "7 \n 5 \n "  ) ,
-    new Equipos("G" , " 1) brasil \n 2) suiza  \n 3) camerun \n 4) serbia \n " , " brasil \n suiza " ,  "6 \n 6 \n "  ) ,
-    new Equipos("H" , " 1) portugal \n 2) corea del sur \n 3) uruguay \n 4) ghana \n " , " portugal \n corea del sur " ,  "6 \n 4 \n "  ) ,
-    
+// Equipos
+ const Grupo = [
+    new Equipos("A" , " 1) Paises bajos \n 2) Senegal \n 3) Ecuador \n 4) Qatar \n " , " Paises Bajos \n  Senegal \n " , " Paises Bajos: 7 \n Senegal: 6 \n "  )  ,
+    new Equipos("B" , " 1) Inglaterra \n 2) Estados Unidos \n 3) Iran \n 4) Gales \n " , "Inglaterra \n Estados Unidos \n " , " Inglaterra: 7 \n Estados Unidos: 5 \n "  ) , 
+    new Equipos("C" , " 1) Argentina \n 2) Polonia \n 3) Mexico \n 4) Arabia Saudita \n " , " Argentina \n  Polonia \n " , " Argentina: 6 \n Polonia: 4 \n "  )  ,
+    new Equipos("D" , " 1) Francia \n 2) Australia \n 3) Tunez \n 4) Dinamarca \n ", "Francia \n Australia \n " , " Francia: 6 \n Australia: 6 \n ") ,
+    new Equipos("E" , " 1) Japon \n 2) España \n 3) Alemania \n 4) Costa Rica \n " , " Japon \n España " ,  " Japon: 6 \n España: 4 \n "  ) ,
+    new Equipos("F" , " 1) Marruecos \n 2) Croacia \n 3) Belgica \n 4) Canada \n " , " Marruecos \n Croacia " ,  " Marruecos: 7 \n Croacia: 5 \n "  ) ,
+    new Equipos("G" , " 1) Brasil \n 2) Suiza  \n 3) Camerun \n 4) Serbia \n " , " Brasil \n suiza " ,  " Brasil: 6 \n Suiza: 6 \n "  ) ,
+    new Equipos("H" , " 1) Portugal \n 2) Corea Del Sur \n 3) Uruguay \n 4) Ghana \n " , " Portugal \n Corea Del Sur " ,  " Portugal: 6 \n Corea Del Sur: 4 \n "  ) ,
 ]
+//Equipos 
+
+// Primera opcion
 let primeraOpcion = "1"
-let ValorEncontrado; 
- if (opciones == primeraOpcion) {
-    letra = prompt("Ingrese un Grupo:\n A \n B \n C \n D \n E \n F \n G \n H \n  ")
-    Grupo.find(Grupo => Grupo.letra == "A")
-    let ValorEncontrado = Grupo.find (grupo => grupo.letra == "A")
- }
-/*console.log(valorEncontrado)
- 
-     {
-  let LetraElegida = prompt("Elige la informacion que quieres tener sobre el grupo " + faseDeGrupos + "\n \n •equipos \n \n •equipo clasificado \n \n •puntos de los equipos clasificados")
- }*/
+let ValorEncontrado
+let informacion
+if (opciones == primeraOpcion) {
+   letra = prompt(
+      "Ingrese un Grupo:\n A \n B \n C \n D \n E \n F \n G \n H \n  "
+   );
+   ValorEncontrado = Grupo.find((grupo) => grupo.letra == letra.toUpperCase());
+}
+
+if(ValorEncontrado)
+{
+   informacion = parseInt(prompt(`Que deseas conocer? \n 1) Integrantes \n 2)Clasificados \n 3)Puntuacion \n`))
+
+   if(informacion == 1){
+      alert(`${ValorEncontrado.Grupo}`)
+
+   }else if (informacion == 2) {
+    alert(ValorEncontrado.EquipoClasificado)
+
+   }else if (informacion == 3) {
+    alert(ValorEncontrado.PuntosEquipoClasificado)
+   }
+   }
+ // Primera opcion 
+
+// Segunda opcion 
+let SegundaOpcion = "2"
+
+if (opciones == SegundaOpcion) {
+    alert("Argentina vs ganador entre Francia vs Marruecos")
+}
+// Segunda opcion 
+
 
 
 
