@@ -55,7 +55,7 @@ if(ValorEncontrado)
 let SegundaOpcion = "2"
 
 if (opciones == SegundaOpcion) {
-    alert("Argentina vs ganador entre Francia vs Marruecos")
+    alert("Argentina vs Francia")
 }
 // Segunda opcion 
 
